@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+
+<body>
+    <div class="flex col-2 row" id="form">
+        <div class="left col">
+            <div class="col-spacer">
+                <div class="form-header"><i class="fas fa-lock icon txtglow"></i><span>Login </span></div>
+            </div>
+            <form name="myform" method="post" action="bt cuối khóa.html"
+        onsubmit="return validateform()">
+            <div class="input-wrap">
+                <div class="input-icon">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <input type="text" placeholder="Username or Email" name="name"/>
+                </div><a class="input-desc" href="#">Forgot your username?</a>
+            </div>
+            <div class="input-wrap">
+                <div class="input-icon">
+                    <div class="icon"><i class="fas fa-key"></i></div>
+                    <input type="password" placeholder="Password" name="password"/>
+                </div><a class="input-desc" href="#">Forgot your password?</a>
+            </div>
+            <div class="flex space mt-5">
+                <div class="cb-wrap">
+                    <input class="glow" id="remember" type="checkbox" name="rembember" />
+                    <label for="remember">Remember me</label>
+                </div>
+                <button class="primary big" type="submit">SIGN-IN NOW</button>
+            </div>
+        </form>
+        </div>
+        <div class="right col flex column">
+            <div class="col-spacer"></div>
+            <button class="twitter social"><i class="fab fa-twitter fa-fw"></i>Sign in with Twitter</button>
+            <button class="facebook social"><i class="fab fa-facebook-f fa-fw"></i>Sign in with Facebook</button>
+            <button class="googleplus social"><i class="fab fa-google-plus-g fa-fw"></i>Sign in with Google+</button>
+            <button class="linkedin social"><i class="fab fa-linkedin-in fa-fw"></i>Sign in with Linkedin</button>
+        </div>
+    </div>
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+     
+            if (name == null || name == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            if (name != "nguyen"){
+                alert("Login information is incorrect")
+                return false
+            } else if (password != "123456") {
+                alert("Login information is incorrect")
+                return false
+            }
+
+        }
+    </script>
+</body>
+
+</html>

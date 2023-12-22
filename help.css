@@ -1,0 +1,26 @@
+.navbar {
+    margin-bottom: 0;
+}
+body {
+    background: url("http://bgfons.com/uploads/cloth/cloth_texture1068.jpg") center center no-repeat;
+}
+.navbar {
+    overflow: visible;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+ul{
+list-style: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+a:link{
+text-decoration: none;
+}
